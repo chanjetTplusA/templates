@@ -16,9 +16,9 @@ require.ensure([], require => {
   // require('antlr4');
   // require('nools');
 
-  // require('i18next-browser-languagedetector');
-  // require('i18next-xhr-backend');
-  // require('i18next');
+  require('i18next-browser-languagedetector');
+  require('i18next-xhr-backend');
+  require('i18next');
 
   const clientModules = require('./clientModules');
   const moduleNames = Object.keys(clientModules);

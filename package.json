@@ -1,54 +1,62 @@
 {
-  "name": "tplus-template-mobile",
-  "version": "1.0.1",
-  "description": "touch protal",
-  "main": "dist/index.js",
+  "name": "tplus-pc",
+  "version": "1.0.0",
+  "description": "pc",
+  "productName": "tplus",
+  "main": "main.js",
   "scripts": {
-    "start": "cross-env PUBLIC_TYPE=offline DEV_ENV=mobile CIA_ENV=inte  PROXY_PORT=4000 node node_modules/tplus-devtools/bin/start",
-    "build": "rimraf dist && cross-env DEV_ENV=mobile CIA_ENV=inte node node_modules/tplus-devtools/bin/entry",
-    "dev": "rimraf dist && cross-env NODE_ENV=offline node node_modules/tplus-devtools/bin/dev ../pos",
-    "pub": "npm run build && npm publish --registry https://registry.npmjs.org",
-    "test": "set DEBUG=tplus:*,-not_this && mocha",
+    "start": "cross-env VERSIONDETAIL=true node node_modules/tplus-devtools/bin/start",
+    "build": "node checkVersion.js && rm -rf dist && cross-env PROXY_URL=http://test-tfproxy.chanjet.com SOURCEMAP=true VERSIONDETAIL=true node node_modules/tplus-devtools/bin/entry",
+    "local_build": "rm -rf dist && cross-env PROXY_URL=http://test-tfproxy.chanjet.com SOURCEMAP=true PUBLIC_URL='' node node_modules/tplus-devtools/bin/entry",
+    "tplus_build": "rm -rf dist && cross-env PROXY_URL=http://test-tfproxy.chanjet.com SOURCEMAP=true PUBLIC_URL='/tplus/touch/' BASENAME='/tplus/touch/' node node_modules/tplus-devtools/bin/entry",
+    "tplus_build_win": "cross-env PROXY_URL=http://test-tfproxy.chanjet.com SOURCEMAP=true PUBLIC_URL='/tplus/touch/' BASENAME='/tplus/touch/' node node_modules/tplus-devtools/bin/entry",
     "install": "node node_modules/tplus-devtools/bin/install",
-    "zip": "npm run install && npm run build && node bin/zip"
+    "test": "jest",
+    "patch": "node patch.js",
+    "pubDependences": "node ./pub && sleep 300"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@tplus.com:tplus-touch"
   },
   "keywords": [
-    "tplus",
-    "queryScheme"
+    "touch",
+    "client"
   ],
   "author": "tplus",
   "license": "ISC",
+  "jest": {
+    "roots": [
+      "<rootDir>/test"
+    ],
+    "moduleFileExtensions": [
+      "js"
+    ],
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/test/__mocks__/fileMock.js",
+      ".*\\.(css|less|scss)$": "<rootDir>/test/__mocks__/styleMock.js"
+    },
+    "transform": {
+      "^.+\\.js$": "babel-jest"
+    }
+  },
   "dependencies": {
-    "antd-mobile": "^2.2.13",
-    "core-decorators": "^0.12.0",
-    "echarts": "^4.2.1",
-    "echarts-for-react": "^2.0.15-beta.0",
-    "moment": "^2.22.1",
-    "prop-types": "^15.6.0",
-    "react": "^16.8.6",
-    "react-addons-css-transition-group": "^15.6.2",
-    "react-addons-shallow-compare": "^15.6.0",
-    "react-dom": "^16.8.6",
-    "tplus-api": "^1.0.175",
-    "tplus-mobile-components": "^1.0.5",
-    "tplus-mobile-navigator": "^1.0.13",
-    "tplus-mobile-plugin-gzq": "^1.0.15",
-    "tplus-mobilelogin": "^1.0.23",
-    "tplus-query-scheme": "^1.0.7",
-    "tplusfx": "^3.0.196",
-    "vconsole": "^3.3.4",
-    "zevent": "^1.1.1"
+    "tinper-bee": "2.2.0",
+    "tplus-api": "^1.0.173",
+    "tplus-appfx": "1.1.32",
+    "tplusfx": "^3.0.196"
   },
   "devDependencies": {
-    "archiver": "^1.1.0",
     "babel-eslint": "^8.0.3",
-    "chalk": "^2.4.1",
-    "cross-env": "^5.2.0",
+    "babel-jest": "^23.6.0",
+    "cross-env": "^5.2.1",
     "eslint": "^4.13.1",
-    "eslint-plugin-react": "^7.12.4",
-    "mocha": "^5.2.0",
-    "quick-local-ip": "^1.0.7",
-    "react-motion": "^0.5.2",
-    "tplus-devtools": "^3.0.76"
+    "eslint-plugin-react": "^7.14.2",
+    "jest": "^23.6.0",
+    "tplus-devtools": "^3.0.88"
+  },
+  "alldepProjects": {
+  },
+  "depProjects": {
   }
 }
