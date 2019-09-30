@@ -21,19 +21,22 @@ const {platform,constant} = env;
 // let vConsole  = new VConsole();
 
 
-const appName = '智慧营销';
-const appId = '31019';
-const appDesc = '数据分析，智慧推广，赋能业务员，让营销更简单！';
+// const appName = '智慧营销';
+// const appId = '31019';
+// const appDesc = '数据分析，智慧推广，赋能业务员，让营销更简单！';
 const serviceDue = true;
-const logoSrc = './image/welcome.png';
+//欢迎页
+// const logoSrc = './image/welcome.png';
 
-const indexPage = 'portal';
+//登录后跳转页面
+// const indexPage = 'portal';
 const username = '15175750878';
 const password = 'fengtao10';
-const accountFilter = ['YKJ'];
+//企业过滤
+// const accountFilter = ['YKJ'];
 
-const iosVersion = '4.9.0';
-const androidVersion = '4.9.2';
+// const iosVersion = '4.9.0';
+// const androidVersion = '4.9.2';
 
 //注册登录中间件
 // registerLoginMiddleWare('setSysInfo', BusLoginStore.setSysInfo);
@@ -44,21 +47,22 @@ registerRoutes(routers);
 //注册store
 registerStores(stores);
 //注册登录信息
-setLoginParam({ indexPage, username, password, accountFilter, serviceDue,appName ,appId});
+// setLoginParam({ indexPage, username, password, accountFilter, serviceDue,appName ,appId});
+setLoginParam({  serviceDue });
 //注册app版本控制
-setAppMinVersion({ iosVersion, androidVersion });
+// setAppMinVersion({ iosVersion, androidVersion });
 //工作圈登录欢迎页信息
-setLogoPageInfo({ appName, appDesc, logoSrc });
-registerLogoutMiddleWare('ZYX_logout', () => {
-    //如果是浏览器状态  增加下注销方法  如果在工作圈或友空间环境下  在tplus-api中处理
-    if(platform == constant.platform.browser){
-        setTimeout(()=>{
-            destroyApp();
-        },200);
-    }
-});
-const amountCodeList = ['SysManage_MBAuthentication_01005'];
-registerBizError(amountCodeList);
+// setLogoPageInfo({ appName, appDesc, logoSrc });
+// registerLogoutMiddleWare('ZYX_logout', () => {
+//     //如果是浏览器状态  增加下注销方法  如果在工作圈或友空间环境下  在tplus-api中处理
+//     if(platform == constant.platform.browser){
+//         setTimeout(()=>{
+//             destroyApp();
+//         },200);
+//     }
+// });
+// const amountCodeList = ['SysManage_MBAuthentication_01005'];
+// registerBizError(amountCodeList);
 ReactDOM.render(<App />, document.getElementById('root'));
 
 

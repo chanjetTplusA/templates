@@ -5,11 +5,6 @@ module.exports = {
       cb(require("tplus-mobile-plugin-gzq"));
     },"mobile-plugin-gzq");
   },
-  "mobile-components": cb => {
-    require.ensure([], require => {
-      cb(require("tplus-mobile-components"));
-    },"mobile-components");
-  },
   "mobile-navigator": cb => {
     require.ensure([], require => {
       cb(require("tplus-mobile-navigator"));
@@ -24,10 +19,5 @@ module.exports = {
     require.ensure([], require => {
       cb(require("tplus-mobilelogin"));
     },"mobilelogin");
-  },
-  "query-scheme": cb => {
-    require.ensure([], require => {
-      cb(require("tplus-query-scheme"));
-    },"query-scheme");
   }
 }
