@@ -1,7 +1,7 @@
 {
-  "name": "tplus-pc",
+  "name": "tplus",
   "version": "1.0.0",
-  "description": "pc",
+  "description": "tplus",
   "productName": "tplus",
   "main": "main.js",
   "scripts": {
@@ -10,19 +10,13 @@
     "local_build": "rm -rf dist && cross-env PROXY_URL=http://test-tfproxy.chanjet.com SOURCEMAP=true PUBLIC_URL='' node node_modules/tplus-devtools/bin/entry",
     "tplus_build": "rm -rf dist && cross-env PROXY_URL=http://test-tfproxy.chanjet.com SOURCEMAP=true PUBLIC_URL='/tplus/touch/' BASENAME='/tplus/touch/' node node_modules/tplus-devtools/bin/entry",
     "tplus_build_win": "cross-env PROXY_URL=http://test-tfproxy.chanjet.com SOURCEMAP=true PUBLIC_URL='/tplus/touch/' BASENAME='/tplus/touch/' node node_modules/tplus-devtools/bin/entry",
-    "install": "node node_modules/tplus-devtools/bin/install",
-    "test": "jest",
-    "patch": "node patch.js",
-    "pubDependences": "node ./pub && sleep 300"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
-    "url": "git@tplus.com:tplus-touch"
+    "url": ""
   },
-  "keywords": [
-    "touch",
-    "client"
-  ],
+  "keywords": [],
   "author": "tplus",
   "license": "ISC",
   "jest": {
@@ -40,12 +34,7 @@
       "^.+\\.js$": "babel-jest"
     }
   },
-  "dependencies": {
-    "tinper-bee": "2.2.0",
-    "tplus-api": "^1.0.173",
-    "tplus-appfx": "1.1.32",
-    "tplusfx": "^3.0.196"
-  },
+  "dependencies": {},
   "devDependencies": {
     "babel-eslint": "^8.0.3",
     "babel-jest": "^23.6.0",
@@ -53,10 +42,6 @@
     "eslint": "^4.13.1",
     "eslint-plugin-react": "^7.14.2",
     "jest": "^23.6.0",
-    "tplus-devtools": "^3.0.88"
-  },
-  "alldepProjects": {
-  },
-  "depProjects": {
+    "tplus-devtools": "^3.0.91"
   }
 }

@@ -1,1 +1,0 @@
-npm run tplus_build_win
