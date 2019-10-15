@@ -5,9 +5,9 @@
   "author": "hzy0913",
   "private": true,
   "scripts": {
-    "start": "webpack-dev-server --config build/dev.js",
-    "dev": "npm start",
-    "build": "node build/build.js"
+    "start": "build2webpack-start",
+    "build": "build2webpack-build",
+    "dev": "npm start"
   },
   "dependencies": {
     "react": "^16.2.0",
@@ -15,7 +15,7 @@
     "react-router-dom": "^4.2.2"
   },
   "devDependencies": {
-    "autoprefixer": "^7.1.2",
+    "build2webpack": "^1.0.1",
     "babel-core": "^6.22.1",
     "babel-eslint": "^8.2.1",
     "babel-loader": "^7.1.1",
