@@ -5,11 +5,9 @@ module.exports = {
     host: 'localhost',
     port: 8080,
     proxyTable: {},
-    useEslint: true,
     autoOpenBrowser: false,
     errorOverlay: true,
     notifyOnErrors: true,
-    showEslintErrorsInOverlay: true,
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
     devtool: 'cheap-module-eval-source-map',
@@ -24,8 +22,6 @@ module.exports = {
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
     productionSourceMap: true,
-    devtool: '#source-map',
-    productionGzip: false,
-    productionGzipExtensions: ['js', 'css'],
+    devtool: '#source-map'
   }
 };
