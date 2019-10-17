@@ -1,8 +1,8 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 
 class Documentation extends Component {
   state = {
-    Documentations: [
+    documentations: [
       {
         title: 'React',
         url: 'https://doc.react-china.org'
@@ -21,14 +21,15 @@ class Documentation extends Component {
       }
     ]
   };
+
   render() {
-    const {Documentations} = this.state;
+    const { documentations } = this.state;
     return (
-      Documentations.map(item => (
+      documentations.map(item => (
         <div key={item.title} className="documentation-item">
-          <a href={item.url} target="_blank" >
-            <span style={{width: 120, display: 'inline-block'}}>{item.title}</span>
-            <span style={{marginLeft: 30}}>{item.url}</span>
+          <a href={item.url} target="_blank">
+            <span style={{ width: 120, display: 'inline-block' }}>{item.title}</span>
+            <span style={{ marginLeft: 30 }}>{item.url}</span>
           </a>
         </div>
       ))

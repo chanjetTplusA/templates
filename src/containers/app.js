@@ -1,17 +1,16 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import logo from '~/assets/logo.png';
 
 class App extends Component {
-  state = {
-  }
   handleBrowserChange = () => {
-    const {history} = this.props;
+    const { history } = this.props;
     history.push('/docs');
   }
+
   render() {
-    const {location: {pathname}} = this.props;
+    const { location: { pathname }, children } = this.props;
     return (
-      <div className="home" style={{paddingTop: 100}}>
+      <div className="home" style={{ paddingTop: 100 }}>
         <div
           className={`center ${pathname === '/docs' ? 'logo-move' : ''}`}
           onClick={this.handleBrowserChange}
@@ -21,8 +20,8 @@ class App extends Component {
           </div>
           <h1>React Project</h1>
         </div>
-        <div style={{width: '1000px', margin: '0 auto'}}>
-          {this.props.children}
+        <div style={{ width: '1000px', margin: '0 auto' }}>
+          { children }
         </div>
       </div>
     );
