@@ -1,4 +1,4 @@
-import {routes} from 'tplusfx';
+import {routes} from 'mutants-microfx';
 import Home from '../pages/home';
 import VersionInfo from '../pages/version-info';
 

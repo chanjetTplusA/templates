@@ -3,6 +3,6 @@ import './style.less';
 
 export default function Home() {
   return <div className='hpme-container'>
-    <h1>Hello Chanjet ~</h1>
+    <h1>Hello Mutants ~</h1>
   </div>
 }
