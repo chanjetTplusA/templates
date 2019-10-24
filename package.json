@@ -1,15 +1,15 @@
 {
-  "name": "tplus",
+  "name": "mutants",
   "version": "1.0.0",
-  "description": "tplus",
-  "productName": "tplus",
+  "description": "mutants",
+  "productName": "mutants",
   "main": "main.js",
   "scripts": {
-    "start": "cross-env VERSIONDETAIL=true node node_modules/tplus-devtools/bin/start",
-    "build": "node checkVersion.js && rm -rf dist && cross-env PROXY_URL=http://test-tfproxy.chanjet.com SOURCEMAP=true VERSIONDETAIL=true node node_modules/tplus-devtools/bin/entry",
+    "start": "cross-env VERSIONDETAIL=true node node_modules/mutants-devtools/bin/start",
+    "build": "node checkVersion.js && rm -rf dist && cross-env PROXY_URL=http://test-tfproxy.chanjet.com SOURCEMAP=true VERSIONDETAIL=true node node_modules/mutants-devtools/bin/entry",
     "local_build": "rm -rf dist && cross-env PROXY_URL=http://test-tfproxy.chanjet.com SOURCEMAP=true PUBLIC_URL='' node node_modules/tplus-devtools/bin/entry",
-    "tplus_build": "rm -rf dist && cross-env PROXY_URL=http://test-tfproxy.chanjet.com SOURCEMAP=true PUBLIC_URL='/tplus/touch/' BASENAME='/tplus/touch/' node node_modules/tplus-devtools/bin/entry",
-    "tplus_build_win": "cross-env PROXY_URL=http://test-tfproxy.chanjet.com SOURCEMAP=true PUBLIC_URL='/tplus/touch/' BASENAME='/tplus/touch/' node node_modules/tplus-devtools/bin/entry",
+    "tplus_build": "rm -rf dist && cross-env PROXY_URL=http://test-tfproxy.chanjet.com SOURCEMAP=true PUBLIC_URL='/tplus/touch/' BASENAME='/tplus/touch/' node node_modules/mutants-devtools/bin/entry",
+    "tplus_build_win": "cross-env PROXY_URL=http://test-tfproxy.chanjet.com SOURCEMAP=true PUBLIC_URL='/tplus/touch/' BASENAME='/tplus/touch/' node node_modules/mutants-devtools/bin/entry",
     "test": "jest"
   },
   "repository": {
@@ -17,7 +17,7 @@
     "url": ""
   },
   "keywords": [],
-  "author": "tplus",
+  "author": "mutants",
   "license": "ISC",
   "jest": {
     "roots": [
@@ -42,6 +42,6 @@
     "eslint": "^4.13.1",
     "eslint-plugin-react": "^7.14.2",
     "jest": "^23.6.0",
-    "tplus-devtools": "^3.0.91"
+    "mutants-devtools": "^1.0.0"
   }
 }
