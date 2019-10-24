@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from 'mutants-appfx';
+import App from 'mutants-microfx';
 
 import './routes';
 import './app.less';
