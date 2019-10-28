@@ -34,7 +34,9 @@
       "^.+\\.js$": "babel-jest"
     }
   },
-  "dependencies": {},
+  "dependencies": {
+    "mutants-microfx": "^1.0.0"
+  },
   "devDependencies": {
     "babel-eslint": "^8.0.3",
     "babel-jest": "^23.6.0",
