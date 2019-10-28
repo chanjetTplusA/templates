@@ -1,6 +1,9 @@
 {
-  "name": "root",
+  "name": "mutants-project",
   "private": true,
+  "version": "1.0.0",
+  "description": "mutants project",
+  "author": "mutants",
   "devDependencies": {
     "lerna": "^3.18.3"
   }
