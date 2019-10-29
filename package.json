@@ -10,7 +10,7 @@
     "local_build": "rm -rf dist && cross-env PROXY_URL=http://test-tfproxy.chanjet.com SOURCEMAP=true PUBLIC_URL='' node node_modules/tplus-devtools/bin/entry",
     "tplus_build": "rm -rf dist && cross-env PROXY_URL=http://test-tfproxy.chanjet.com SOURCEMAP=true PUBLIC_URL='/tplus/touch/' BASENAME='/tplus/touch/' node node_modules/mutants-devtools/bin/entry",
     "tplus_build_win": "cross-env PROXY_URL=http://test-tfproxy.chanjet.com SOURCEMAP=true PUBLIC_URL='/tplus/touch/' BASENAME='/tplus/touch/' node node_modules/mutants-devtools/bin/entry",
-    "test": "jest"
+    "test": "jest la"
   },
   "repository": {
     "type": "git",
