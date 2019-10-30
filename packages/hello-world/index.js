@@ -1,5 +1,5 @@
 function hello() {
-  console.log('hel222lo')
+  console.log('hello3')
 }
 
 export default hello;
