@@ -1,6 +1,16 @@
 {
   "packages": [
-    "modules/*"
+    "packages/*"
   ],
-  "version": "1.0.0"
+  "version": "independent",
+  "npmClient": "npm",
+  "command": {
+    "version": {
+      "message": "some commit messages"
+    }
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "installRegistry": "https://registry.npm.taobao.org/"
 }
