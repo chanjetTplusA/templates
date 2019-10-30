@@ -5,12 +5,10 @@
   "productName": "mutants",
   "main": "index.js",
   "scripts": {
-    "start": "cross-env VERSIONDETAIL=true node node_modules/mutants-devtools/bin/start",
-    "build": "node checkVersion.js && rm -rf dist && cross-env PROXY_URL=http://test-tfproxy.chanjet.com SOURCEMAP=true VERSIONDETAIL=true node node_modules/mutants-devtools/bin/entry",
-    "local_build": "rm -rf dist && cross-env PROXY_URL=http://test-tfproxy.chanjet.com SOURCEMAP=true PUBLIC_URL='' node node_modules/tplus-devtools/bin/entry",
-    "tplus_build": "rm -rf dist && cross-env PROXY_URL=http://test-tfproxy.chanjet.com SOURCEMAP=true PUBLIC_URL='/tplus/touch/' BASENAME='/tplus/touch/' node node_modules/mutants-devtools/bin/entry",
-    "tplus_build_win": "cross-env PROXY_URL=http://test-tfproxy.chanjet.com SOURCEMAP=true PUBLIC_URL='/tplus/touch/' BASENAME='/tplus/touch/' node node_modules/mutants-devtools/bin/entry",
-    "test": "jest"
+    "start": "node node_modules/mutants-devtools/bin/start",
+    "build": "rm -rf dist && node node_modules/mutants-devtools/bin/build",
+    "pub": "npm run build && npm publish --registry https://registry.npmjs.org",
+    "test": "set DEBUG=tplus:*,-not_this && mocha"
   },
   "repository": {
     "type": "git",
@@ -19,6 +17,18 @@
   "keywords": [],
   "author": "mutants",
   "license": "ISC",
+  "dependencies": {
+    "mutants-microfx": "^1.0.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.0.3",
+    "babel-jest": "^23.6.0",
+    "cross-env": "^5.2.1",
+    "eslint": "^4.13.1",
+    "eslint-plugin-react": "^7.14.2",
+    "jest": "^23.6.0",
+    "mutants-devtools": "^1.0.0"
+  },
   "jest": {
     "roots": [
       "<rootDir>/test"
@@ -33,17 +43,5 @@
     "transform": {
       "^.+\\.js$": "babel-jest"
     }
-  },
-  "dependencies": {
-    "mutants-microfx": "^1.0.0"
-  },
-  "devDependencies": {
-    "babel-eslint": "^8.0.3",
-    "babel-jest": "^23.6.0",
-    "cross-env": "^5.2.1",
-    "eslint": "^4.13.1",
-    "eslint-plugin-react": "^7.14.2",
-    "jest": "^23.6.0",
-    "mutants-devtools": "^1.0.0"
   }
 }
