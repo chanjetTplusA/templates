@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "mutants",
   "productName": "mutants",
-  "main": "src/main.js",
+  "main": "index.js",
   "scripts": {
     "start": "cross-env VERSIONDETAIL=true node node_modules/mutants-devtools/bin/start",
     "build": "node checkVersion.js && rm -rf dist && cross-env PROXY_URL=http://test-tfproxy.chanjet.com SOURCEMAP=true VERSIONDETAIL=true node node_modules/mutants-devtools/bin/entry",
