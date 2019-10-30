@@ -1,6 +1,6 @@
 {
-  "name": "hello-world",
-  "version": "0.0.3",
+  "name": "hello-world-t-1",
+  "version": "1.0.0",
   "main": "index.js",
   "private": true,
   "devDependencies": {
