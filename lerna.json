@@ -1,6 +1,6 @@
 {
   "packages": [
-    "packages/*"
+    "modules/*"
   ],
   "version": "independent",
   "npmClient": "npm",
