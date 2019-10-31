@@ -1,8 +1,5 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from 'mutants-microfx';
-
-import './routes';
+import { registerRoutes } from 'mutants-microfx';
 import './app.less';
+import routes from './pages';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+registerRoutes(routes);
