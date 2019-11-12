@@ -3,10 +3,11 @@
   "version": "1.0.0",
   "description": "mutants",
   "productName": "mutants",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
-    "start": "node node_modules/mutants-devtools/bin/start",
-    "build": "rm -rf dist && node node_modules/mutants-devtools/bin/build",
+    "start": "devtools-start",
+    "build": "devtools-build",
+    "script": "devtools-scripts",
     "pub": "npm run build && npm publish --registry https://registry.npmjs.org",
     "test": "set DEBUG=tplus:*,-not_this && mocha"
   },
