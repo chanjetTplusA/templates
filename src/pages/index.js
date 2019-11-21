@@ -1,6 +1,6 @@
 import Home from './home';
 
 export default [{
-  path:'/',
+  path: '/',
   component: Home
 }];
