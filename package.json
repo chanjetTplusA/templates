@@ -6,9 +6,8 @@
   "main": "main.js",
   "private": true,
   "scripts": {
-    "start": "node node_modules/mutants-devtools/bin/start",
-    "build": "rm -rf dist && node node_modules/mutants-devtools/bin/entry",
-    "test": "jest la"
+    "start": "devtools-start",
+    "build": "devtools-prod"
   },
   "repository": {
     "type": "git",
