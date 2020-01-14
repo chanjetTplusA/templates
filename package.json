@@ -10,10 +10,10 @@
     "dev": "npm start"
   },
   "dependencies": {
+    "@hot-loader/react-dom": "^16.10.2",
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
-    "react-router-dom": "^5.1.2",
-    "@hot-loader/react-dom": "^16.10.2"
+    "react-router-dom": "^5.1.2"
   },
   "devDependencies": {
     "build2webpack": "^1.1.1"

@@ -8,7 +8,7 @@ module.exports = {
     autoOpenBrowser: false,
     errorOverlay: true,
     notifyOnErrors: true,
-    assetsSubDirectory: 'static',
+    assetsSubDirectory: 'assets',
     assetsPublicPath: '/',
     devtool: 'cheap-module-eval-source-map',
     poll: false,
@@ -19,7 +19,7 @@ module.exports = {
     bundleAnalyzerReport: false,
     index: path.resolve(__dirname, '../dist/index.html'),
     assetsRoot: path.resolve(__dirname, '../dist'),
-    assetsSubDirectory: 'static',
+    assetsSubDirectory: 'assets',
     assetsPublicPath: '/',
     productionSourceMap: true,
     devtool: '#source-map'
