@@ -1,6 +1,5 @@
 // 保证加载足够快
 require.ensure([], require => {
-  require('babel-polyfill');
   require('react');
   require('react-dom');
   require('react-router');

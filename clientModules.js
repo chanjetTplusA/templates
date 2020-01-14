@@ -1,9 +1,8 @@
 // 每个应用模块需要在此注册才能加载
 module.exports = {
- 
-  // "setting-touch": cb => {
+  // 'module-namespace': cb => {
   //   require.ensure([], require => {
-  //     cb(require("tplus-setting-touch"));
-  //   },"setting-touch");
-  // }
+  //     cb(require('package-name'));
+  //   }, 'module-namespace");
+  // },
 }
