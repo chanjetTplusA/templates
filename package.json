@@ -8,6 +8,7 @@
     "start": "devtools-start",
     "build": "devtools-build",
     "script": "devtools-scripts",
+    "dev": "devtools-dev file-path",
     "link": "devtools-scripts link module-name",
     "pub": "npm run build && npm publish --registry https://registry.npmjs.org",
     "test": "set DEBUG=tplus:*,-not_this && mocha"
