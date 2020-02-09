@@ -1,5 +1,5 @@
 import { registerRoutes } from 'mutants-microfx';
-import './reset.css';
+import './style/reset.css';
 import routes from './pages';
 
 registerRoutes(routes);
