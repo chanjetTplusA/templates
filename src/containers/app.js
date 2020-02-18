@@ -10,15 +10,23 @@ class App extends Component {
   render() {
     const { location: { pathname }, children } = this.props;
     return (
-      <div className="home" style={{ paddingTop: 100 }}>
+      <div className="home-container" style={{ paddingTop: 100 }}>
         <div
           className={`center ${pathname === '/docs' ? 'logo-move' : ''}`}
           onClick={this.handleBrowserChange}
+          style={{ display: pathname === '/docs' ? 'none' : 'block' }}
         >
-          <div className="logo-box">
-            <img src={logo} className="logo" />
+          <div
+            className="logo-box"
+            style={{ cursor: 'pointer' }}
+          >
+            <img
+              src={logo}
+              className="logo"
+              style={{ backgroundColor: 'rgba(0,0,0,0)' }}
+            />
           </div>
-          <h1>React Project</h1>
+          <h1 style={{ marginTop: 120 }}>React Project</h1>
         </div>
         <div style={{ width: '1000px', margin: '0 auto' }}>
           { children }

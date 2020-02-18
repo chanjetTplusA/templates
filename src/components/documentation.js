@@ -28,8 +28,8 @@ class Documentation extends Component {
       documentations.map(item => (
         <div key={item.title} className="documentation-item">
           <a href={item.url} target="_blank">
-            <span style={{ width: 120, display: 'inline-block' }}>{item.title}</span>
-            <span style={{ marginLeft: 30 }}>{item.url}</span>
+            <span style={{ width: 120, display: 'inline-block', color: '#fff' }}>{item.title}</span>
+            <span style={{ marginLeft: 30, color: '#fff' }}>{item.url}</span>
           </a>
         </div>
       ))
